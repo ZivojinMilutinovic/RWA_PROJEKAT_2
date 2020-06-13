@@ -1,0 +1,62 @@
+<div class="container centar-div">
+
+
+
+<form #form="ngForm" (submit)="onSubmit(form)">
+
+ <div class="row justify-content-center  ">
+<div class="col-md-8 col-lg-6 crna-pozadina p-3 mt-3">
+
+
+<div class="form-group ">
+<input class="form-control"  name="ime" ngModel #ime="ngModel"   placeholder="Ime..." required  />
+
+</div>
+<div class="form-group ">
+  <input class="form-control" name="prezime" ngModel #ime="ngModel" placeholder="Prezime..." required/>
+  </div>
+  <div class="form-group row">
+    <div class="col-5 col-lg-4">
+    <label class="mr-2">Pol:  </label>
+    <div class="form-check-inline">
+    <input  type="radio"  value="m" name="pol" ngModel class="form-check-input" checked />
+    <label class="form-check-label"> M</label>
+  </div>
+  <div class="form-check-inline">
+    <input  type="radio"  value="z" name="pol" ngModel class="form-check-input" />
+    <label class="form-check-label"> Z</label>
+  </div>
+</div>
+<div class="col-7 col-lg-8">
+<select class="form-control" name="godina" ngModel #godina="ngModel">
+  <option *ngFor="let op of opcije" [value]="op">{{op}}</option><!--Data binding!-->
+</select>
+
+
+</div>
+
+  </div>
+  <div class="form-group ">
+    <input class="form-control" name="indeks" ngModel #indeks="ngModel"  placeholder="Broj indeksa..." type="number"  required  />
+    </div>
+  <div class="form-group ">
+    <!-- OBAVEZNO MOrA OVo zbog validacije-->
+    <input class="form-control" name="kime" ngModel #kime="ngModel"  placeholder="Korisnicko ime..." minlength="4"   required />
+    </div>
+  <div class="form-group ">
+    <input class="form-control" name="email" ngModel #email="ngModel"  placeholder="Email..." type="email"  required  />
+    </div>
+
+    <div class="form-group ">
+      <input class="form-control"  name="password" ngModel #password="ngModel" placeholder="Password..." type="password" required  />
+      </div>
+      <div class="form-group ">
+        <button type="submit" class="btn btn-light  btn-lg btn-block" [disabled]="!form.valid" id="register">Registruj se</button>
+        </div>
+    </div>
+  </div>
+
+</form>
+</div>
+
+

@@ -1,1 +1,19 @@
 /* You can add global styles to this file, and also import other style files */
+input.ng-touched.ng-invalid{
+  border-color: red;
+}
+body,html{
+  height: 100%;
+}
+.pozadina-register{
+  background-image: url("assets/AppPictures/register.jpg");
+  background-size:cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.pozadina-login{
+  background-image: url("assets/AppPictures/login.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}

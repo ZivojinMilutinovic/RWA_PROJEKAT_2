@@ -88,9 +88,11 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "./node_modules/bootstrap/dist/css/bootstrap.css"
             ],
-            "scripts": []
+            "scripts": ["./node_modules/jquery/dist/jquery.js",
+              "./node_modules/bootstrap/dist/js/bootstrap.js"]
           }
         },
         "lint": {
@@ -119,6 +121,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "rwa-projekat-angular"
+    }
+  },
+  "defaultProject": "rwa-projekat-angular",
+  "cli": {
+    "analytics": "171c5e90-196f-4767-a82e-9e6b27915c26"
+  }
 }

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from 'src/app/services/auth.service';
 import { MyUser } from 'src/app/models/user.model';
+import { NavbarService } from 'src/app/services/navbar.service';
 
 @Component({
   selector: 'app-navbar',
@@ -10,11 +11,16 @@ import { MyUser } from 'src/app/models/user.model';
 export class NavbarComponent implements OnInit {
 
   user:MyUser;
-  constructor(public auth:AuthService) { }
+  constructor(public auth:AuthService,public navService:NavbarService) { }
 
 
   ngOnInit(): void {
     this.auth.user$.subscribe(val=>this.user=val);
   }
+    vratikIme():string{
 
+      if(this.user==null)
+       return '';
+       else return this.user.kime;
+    }
 }

@@ -1,0 +1,631 @@
+
+
+
+.sidenav{
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgb(41, 37, 37);
+    overflow-x: hidden;
+    padding-top: 60px;
+    transition: 0.5s;
+}
+.sidenav a
+{
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+.sidenav a:hover {
+    color: #f1f1f1;
+    text-decoration: none;
+  }
+  .sidenav .closebtn
+  {
+      position: absolute;
+      top: 0;
+      right: 25px;
+      font-size: 36px;
+      margin-left: 50px;
+  }
+  @media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+  }
+
+  .bg1
+  {
+    background-image: url("../../../assets/AppPictures/pozadina1.jpg");
+  }
+  .bg2
+  {
+    background-image: url("../../../assets/AppPictures/bg2.jpg");
+
+  }
+  .parallax
+  {
+      position: relative;
+
+    min-height: 100%;
+    background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  }
+  .border
+  {
+      background-color: #111;
+      color: #fff;
+      padding: 18px;
+      font-size: 25px;
+      letter-spacing: 10px;
+  }
+  .caption
+  {
+      position: absolute;
+      width: 100%;
+      left: 0;
+      top: 40%;
+      text-align: center;
+      color: #000;
+  }
+  @media only screen and (max-device-width: 1366px) {
+    .parallax {
+      background-attachment: scroll;
+
+    }
+     .border
+    {
+      display: block !important;
+
+    }
+
+  }
+  @media only screen and (max-device-width: 1366px)
+  {
+    .div1
+    {
+      padding: 15px 15px !important;
+    }
+    .kolona img
+    {
+      height: 110px !important;
+    }
+    .slika
+    {
+      height: 200px !important;
+    }
+
+  }
+  @media only screen and (max-device-width: 545px)
+  {
+    .centriraj{
+      width:90% !important;
+    }
+    .zadnjiDiv{
+      height: 450px !important;
+    }
+   .box{
+    transform: rotate(-45deg ) skewY(25deg) scale(0.5) !important;
+    transition: .5s !important;
+   }
+
+  }
+
+
+    *{
+      box-sizing: border-box;
+    }
+    .Kontejner
+    {
+      position: relative;
+
+    }
+    .mySlides {
+      display: none;
+    }
+    .cursor
+    {
+      cursor: pointer;
+    }
+    .kolona img
+    {
+      width: 100%;
+      height: 150px;
+    }
+    .kolona
+    {
+      float: left;
+      width: 20%;
+    }
+    .demo
+    {
+      opacity: 0.6;
+    }
+    .active,.demo:hover
+    {
+      opacity: 1;
+    }
+    .caption-container {
+      text-align: center;
+      background-color: #222;
+      padding: 2px 16px;
+      color: white;
+    }
+    .red:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+    .slika
+    {
+      height: 350px;
+      width: 100%;
+    }
+    .centriraj
+    {
+      width: 60%;
+      margin: 0 auto;
+    }
+    .numbertext {
+      color: #f2f2f2;
+      font-size: 12px;
+      padding: 8px 12px;
+      position: absolute;
+      top: 0;
+    }
+
+    .prev,.next
+    {
+      cursor: pointer;
+      position: absolute;
+      top: 40%;
+      width: auto;
+      font-weight: bold;
+      font-size: 20px;
+      user-select: none;
+      padding: 16px;
+      margin-top: -50px;
+      border-radius: 0 3px 3px 0;
+      color: wheat;
+
+    }
+    .next
+    {
+      right: 0;
+    }
+    .prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+    .div1
+    {
+      text-align: center;
+      text-align: justify;
+      padding: 70px 250px;
+      color: #777;
+      background-color: whitesmoke;
+
+    }
+
+/*Sad sledi za zemlju demo  */
+
+.earth-demo
+{
+  position: relative;
+ margin-top:200px;
+ margin-bottom: 400px;
+ background-image: url("../../../assets/AppPictures/space.jpg") !important;
+}
+.earth
+{
+  position: absolute;
+  top:calc(50% - 100px);
+  left:calc(50% - 100px);
+}
+.earth img {
+  height: 200px;
+  position: absolute;
+    top: 0;
+    left: 0;
+  width: 200px;
+}
+.moon-container
+{
+  position: absolute;
+  top:calc(50% - 25px);
+  left:calc(50% - 25px);
+}
+.moon
+{
+  animation: spin 20s linear  infinite  ;
+  background: none;
+  transform-origin: 25px;
+  width: 50px;
+  height: 50px;
+  pointer-events: none;
+}
+.moon img
+{
+  width: 50px;
+  height: 50px;
+  transform: translateX(-160px);
+  transform: translateY(-160px);
+}
+.earth img, .moon img {
+  border-radius: 50%;
+  box-shadow: 0 0 12em 1em rgba(110, 140, 200, .6);
+}
+@keyframes spin {
+  to {
+    transform: rotateZ(360deg);
+
+  }
+}
+.more-info
+{
+  background-image: linear-gradient(to bottom, rgba(10,10,10,1), black);
+  border-radius: 1em;
+  color: #fff;
+  opacity: 0;
+  margin-top: 50px;
+  margin-left: 40px;
+  padding: 1em;
+  transform-origin: 0 0;
+  transform: scale(.8);
+  width: 400px;
+}
+.more-info h1
+{
+  margin: 0 0 1em;
+  text-align: right;
+}
+.earth:hover img { transform: translateX(-75px) translateY(-75px) scale(.5); }
+.earth:hover ~ .moon-container { transform: translateX(-75px) translateY(-75px) scale(.5); }
+
+.earth:hover ~ .moon-container img { transform: translateX(-140px) translateY(-140px); }
+.earth:hover .more-info { opacity: 0.7; transform: none; }
+.earth-demo * {
+  transition: all 4s cubic-bezier(0,1.5,.3,1);
+}
+.earth-demo h1, li {
+  opacity: 0;
+}
+.earth-demo:hover h1, li {
+  opacity: 1;
+}
+.earth-demo:hover li:nth-child(1) {
+  transition-delay: 0s;
+}
+
+.earth-demo:hover li:nth-child(2) {
+  transition-delay: 0.2s;
+}
+
+.earth-demo:hover li:nth-child(3) {
+  transition-delay: 0.4s;
+}
+
+/* 3d BAR */
+
+
+.zadnji
+{
+  display: flex;
+
+  box-sizing: content-box;
+  height: 200px;
+  margin-top: 100px;
+}
+.dijagrami
+{
+  flex: 50%;
+}
+.no-filter
+{
+  filter: none;
+}
+
+.chip {
+  position: absolute;
+  display: inline-block;
+  padding: 0 25px;
+  height: 100px;
+  font-size: 24px;
+  color: whitesmoke;
+  line-height: 50px;
+  border-radius: 25px;
+  background-color: transparent;
+
+}
+
+.chip img {
+  float: left;
+  margin: 0 10px 0 -25px;
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+}
+.futer
+{
+  display: flex;
+  background-color: #777;
+  height: 50px;
+}
+.otvori
+{
+  font-size: large;position: absolute; top: 5px; left:120px;
+  color: white;
+
+}
+.otvori:hover
+{
+  cursor: pointer;
+}
+.site-footer
+{
+  background-color:#26272b;
+  padding:45px 0 20px;
+  font-size:15px;
+  line-height:24px;
+  color:#737373;
+}
+.site-footer hr
+{
+  border-top-color:#bbb;
+  opacity:0.5
+}
+.site-footer hr.small
+{
+  margin:20px 0
+}
+.site-footer h6
+{
+  color:#fff;
+  font-size:16px;
+  text-transform:uppercase;
+  margin-top:5px;
+  letter-spacing:2px
+}
+.site-footer a
+{
+  color:#737373;
+}
+.site-footer a:hover
+{
+  color:#3366cc;
+  text-decoration:none;
+}
+.footer-links
+{
+  padding-left:0;
+  list-style:none
+}
+.footer-links li
+{
+  display:block
+}
+.footer-links a
+{
+  color:#737373
+}
+.footer-links a:active,.footer-links a:focus,.footer-links a:hover
+{
+  color:#3366cc;
+  text-decoration:none;
+}
+.footer-links.inline li
+{
+  display:inline-block
+}
+.site-footer .social-icons
+{
+  text-align:right
+}
+.site-footer .social-icons a
+{
+  width:40px;
+  height:40px;
+  line-height:40px;
+  margin-left:6px;
+  margin-right:0;
+  border-radius:100%;
+  background-color:#33353d
+}
+.copyright-text
+{
+  margin:0
+}
+@media (max-width:991px)
+{
+  .site-footer [class^=col-]
+  {
+    margin-bottom:30px
+  }
+}
+@media (max-width:767px)
+{
+  .site-footer
+  {
+    padding-bottom:0
+  }
+  .site-footer .copyright-text,.site-footer .social-icons
+  {
+    text-align:center
+  }
+}
+.social-icons
+{
+  padding-left:0;
+  margin-bottom:0;
+  list-style:none
+}
+.social-icons li
+{
+  display:inline-block;
+  margin-bottom:4px
+}
+.social-icons li.title
+{
+  margin-right:15px;
+  text-transform:uppercase;
+  color:#96a2b2;
+  font-weight:700;
+  font-size:13px
+}
+.social-icons a{
+  background-color:#eceeef;
+  color:#818a91;
+  font-size:16px;
+  display:inline-block;
+  line-height:44px;
+  width:44px;
+  height:44px;
+  text-align:center;
+  margin-right:8px;
+  border-radius:100%;
+  -webkit-transition:all .2s linear;
+  -o-transition:all .2s linear;
+  transition:all .2s linear
+}
+.social-icons a:active,.social-icons a:focus,.social-icons a:hover
+{
+  color:#fff;
+  background-color:#29aafe
+}
+.social-icons.size-sm a
+{
+  line-height:34px;
+  height:34px;
+  width:34px;
+  font-size:14px
+}
+.social-icons a.facebook:hover
+{
+  background-color:#3b5998
+}
+.social-icons a.twitter:hover
+{
+  background-color:#00aced
+}
+.social-icons a.linkedin:hover
+{
+  background-color:#007bb6
+}
+.social-icons a.dribbble:hover
+{
+  background-color:#ea4c89
+}
+@media (max-width:767px)
+{
+  .social-icons li.title
+  {
+    display:block;
+    margin-right:0;
+    font-weight:600
+  }
+}
+
+.zadnjiDiv
+{
+  display: flex;
+  height: 630px;
+  background: #fcffff;
+  justify-content: center;
+}
+
+
+
+.box:hover
+{
+    transform:rotate(-45deg ) skewY(25deg) translate(20px,-20px);
+    box-shadow: -60px 100px 6px rgb(0, 0, 0,0.2);
+}
+.box::before
+{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -20px;
+    height: 100%;
+    width: 20px;
+    background: #e4e4e4;
+    transform-origin: right;
+   transform: skewY(-58deg);
+
+}
+.box::after
+{
+    content: '';
+    position: absolute;
+    bottom:  -30px;
+    right: 0;
+
+    width: 100%;
+    height:  30px;
+    background: #e4e4e4;
+    transform-origin:top;
+    transform:skewX(-34deg) ;
+    outline: 1px solid transparent;
+
+
+
+}
+.box
+{
+    position: relative;
+    flex-basis: 300px;
+    width:  300px;
+    height: 576px;
+    background-image: url("../../../assets/AppPictures/space1.jpg");
+   transform: rotate(-45deg ) skewY(25deg);
+   box-shadow: -25px 40px 4px rgb(0, 0, 0,0.2);
+   transition: .5s;
+}
+.glass
+{
+    position: absolute;
+    width: 300px;
+    height: 576px;
+  left: 0;
+  top: 0;
+   background: rgb(141, 140, 140,.2);
+   transform: translate(30px,-30px);
+
+   transition: .5s;
+}
+.glass:hover
+{
+    transform: translate(50px,-50px)
+}
+.mali
+{
+  z-index: 1;
+  position: absolute;
+  left: 0;
+
+  font-weight: bold;
+  font-size: 24px;
+}
+.mali:nth-child(1)
+{
+  top: 0;
+}
+.mali:nth-child(2)
+{
+  top:150px !important;
+}
+.mali:nth-child(3)
+{
+  top:350px !important;
+}
+/* (#ffeee,#ddefbb) */
+.bela-greska{
+  background:#e4e4e4;
+}

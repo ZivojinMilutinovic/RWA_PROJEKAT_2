@@ -45,12 +45,14 @@ export class AuthService {
       if(crediential!=null)
      return this.updateUserData(crediential.user,data);
      else{
-       this.router.navigate(['/']);
+       this.router.navigate(['/']);//ako postoji prosledimo korisnika na pocetnu stranu
      }
      }
 
      //Pravi se kolekcija u bazi users da bi smo pratili svakog usera
      private updateUserData(user:User,data?:MyUser | null){
+
+
 
        const userRef:AngularFirestoreDocument<any> =this.afs.doc("users/"+user.uid);//kreira dokument
         data.uid=user.uid;

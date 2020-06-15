@@ -17,3 +17,9 @@ body,html{
   background-repeat: no-repeat;
   background-position: center;
 }
+.pozadina-home{
+  background-image: url("assets/AppPictures/home.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}

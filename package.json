@@ -24,6 +24,7 @@
     "@ngrx/entity": "^9.1.2",
     "@ngrx/store": "^9.1.2",
     "bootstrap": "^4.5.0",
+    "bulma": "^0.9.0",
     "firebase": "^7.14.5",
     "jquery": "^3.5.1",
     "rxjs": "~6.5.4",

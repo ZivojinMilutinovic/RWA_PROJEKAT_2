@@ -9,8 +9,8 @@ export class ToastService {
 
   constructor(private afs:AngularFirestore) { }
 
-  getMessages(){
-    return this.afs.collection("messages").snapshotChanges();
+  getMessages(brojPoruke){
+    return this.afs.doc<Message>(`messages/${brojPoruke}`).snapshotChanges();
   }
   sendMessage(content,style){
     const message=new Message(content,style);

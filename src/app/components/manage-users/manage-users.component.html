@@ -1,0 +1,69 @@
+<div class="container">
+<h1 class="text-danger m-5">Svi korisnici u aplikaciji</h1>
+
+<div *ngIf="anyUsers();then imaKorisnika else nemaKorisnika">
+
+
+</div>
+
+  <ng-template #imaKorisnika>
+    <a  routerLink="/register"  class="btn btn-primary mb-3">Kliknite ovde da dodate korisnika</a>
+
+
+
+
+
+         <div class="card mb-3" *ngFor="let user of users">
+          <div class="card-header">
+              Korisnicki Id:{{user.uid}}
+
+        </div>
+        <div class="card-body">
+
+
+
+         <img class="card-img-top mb-3" style="max-width:200px;max-height:300px; " src="../../../assets/AppPictures//no_image.gif"
+          alt="Nema sliku">
+
+
+
+            <h5>Korisnicko ime:{{user.kime}}</h5>
+            <div>Ime:{{user.ime}}  {{user.prezime}}</div>
+            <div>Email adresa:{{user.email}}</div>
+            <div>Broj Indeksa:{{user.brojIndeksa}}</div>
+        </div>
+        <div class="card-footer">
+
+             <a class="btn btn-danger" id="obrisi_@user.Id" (click)=toogleObrisi() *ngIf="!obrisi">
+                 Obrisi</a>
+             <div class="row" *ngIf="obrisi">
+                 Da li ste sigurni da zelite da izbristete ovog korisnika
+                 <button class="btn btn-danger col-md-2 mr-2"  (click)="obrisiUsera(user.uid)">Da </button>
+                 <a class="btn btn-primary col-md-2" (click)=toogleObrisi()>Ne</a>
+             </div>
+
+        </div>
+
+</div>
+
+
+
+
+
+  </ng-template>
+
+
+  <ng-template #nemaKorisnika>
+    <div class="card">
+          <div class="card-header">
+              <h3 class="card-title">Nisu dodati nikakvi korisnici</h3>
+
+        </div>
+        <div class="card-body">
+            <a class="btn btn-primary" routerLink="/register">Kliknite ovde da dodate korisnika</a>
+        </div>
+
+
+    </div>
+  </ng-template>
+  </div>

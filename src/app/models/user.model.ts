@@ -8,6 +8,7 @@ export interface MyUser{
   ime:string;
   kime:string;
   prezime:string;
+  role:string;
 
 
 }

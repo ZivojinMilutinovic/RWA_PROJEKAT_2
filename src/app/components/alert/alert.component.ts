@@ -1,4 +1,9 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { Message } from 'src/app/models/message.model';
+import { Observable } from 'rxjs';
+import { Store } from '@ngrx/store';
+
+
 
 @Component({
   selector: 'app-alert',
@@ -7,8 +12,10 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class AlertComponent implements OnInit {
 
-  @Input() klasa:string='alert-danger';
-  @Input() tekst:string='hello'
+
+
+
+  @Input() tekst:Message;
   constructor() { }
 
   ngOnInit(): void {

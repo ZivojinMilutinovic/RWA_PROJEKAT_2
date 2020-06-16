@@ -1,16 +1,29 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable, of } from 'rxjs';
+import { delay, map } from 'rxjs/operators';
+import { Store } from '@ngrx/store';
+import { Message } from 'src/app/models/message.model';
 
+import * as Actions from "../../actions/message.actions"
+interface AppState{
+  message:Message
+}
 @Component({
   selector: 'app-materijali-info',
   templateUrl: './materijali-info.component.html',
   styleUrls: ['./materijali-info.component.css']
 })
 export class MaterijaliInfoComponent implements OnInit {
-
-  constructor() { }
+  message:Observable<Message>
+  constructor(private store:Store<AppState>) {
+    this.message=this.store.select("message");
+  }
   slideIndex=1;
+  alert:Observable<boolean>;;
   ngOnInit(): void {
     this.showSlides(this.slideIndex);
+    this.alert=of(true).pipe(delay(5000));
+    this.store.dispatch(Actions.message_action());
   }
   plusSlides(n) {
     this.showSlides(this.slideIndex += n);

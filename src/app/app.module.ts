@@ -20,6 +20,7 @@ import { HomeComponent } from './components/home/home.component';
 import { VodicComponent } from './components/vodic/vodic.component';
 import { MaterijaliInfoComponent } from './components/materijali-info/materijali-info.component';
 import { AlertComponent } from './components/alert/alert.component';
+import { ManageUsersComponent } from './components/manage-users/manage-users.component';
 
 
 
@@ -37,6 +38,7 @@ import { AlertComponent } from './components/alert/alert.component';
     VodicComponent,
     MaterijaliInfoComponent,
     AlertComponent,
+    ManageUsersComponent,
 
   ],
   imports: [

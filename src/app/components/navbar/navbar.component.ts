@@ -13,6 +13,9 @@ export class NavbarComponent implements OnInit {
   user:MyUser;
   constructor(public auth:AuthService,public navService:NavbarService) { }
 
+  isAdmin():boolean{
+    return this.user.role=='admin';
+  }
 
   ngOnInit(): void {
     this.auth.user$.subscribe(val=>this.user=val);

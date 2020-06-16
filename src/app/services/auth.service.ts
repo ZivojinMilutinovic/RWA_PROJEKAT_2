@@ -56,7 +56,7 @@ export class AuthService {
 
        const userRef:AngularFirestoreDocument<any> =this.afs.doc("users/"+user.uid);//kreira dokument
         data.uid=user.uid;
-
+        data.role="";
        return userRef.set(data,{merge:true});//da li da ih spoji sa prethodnim
      }
      async ulogujSe(email,password){
@@ -72,5 +72,13 @@ export class AuthService {
      async signOut(){
        await this.afAuth.signOut();
        this.router.navigate(['/']);
+     }
+
+     getAllUsers(){
+     return  this.afs.collection<MyUser>("users").snapshotChanges();
+     }
+     obrisiUsera(id){
+       this.afs.doc(`users/${id}`).delete().then(()=>console.log("Korisnik uspesno obrisan"))
+       .catch(err=>console.log("Greska se javila "+err));
      }
 }

@@ -28,6 +28,7 @@ import { BazaBlanketaComponent } from './components/baza-blanketa/baza-blanketa.
 import { D3CheckboxComponent } from './components/d3-checkbox/d3-checkbox.component';
 import { D3CubeSpanComponent } from './components/d3-cube-span/d3-cube-span.component';
 import { D3ButtonComponent } from './components/d3-button/d3-button.component';
+import { pitanjeReducer } from './reducers/pitanje.reducer';
 
 
 
@@ -59,6 +60,7 @@ import { D3ButtonComponent } from './components/d3-button/d3-button.component';
     FormsModule,
     EffectsModule.forRoot(effects),
     StoreModule.forRoot(reducers),
+    StoreModule.forFeature("pitanja",pitanjeReducer),
     AppRoutingModule,
     AngularFirestoreModule,
     AngularFireAuthModule,

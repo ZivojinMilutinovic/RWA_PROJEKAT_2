@@ -18,6 +18,7 @@
 }
 
 .dark{
+  quotes: initial;
 
 }
 .blanket form{
@@ -25,7 +26,8 @@
 }
 
 .mojaKocka{
-  display: none;
+
+  display: flex;
   justify-content: center;
   margin:20px auto !important;
   position: relative;
@@ -104,22 +106,22 @@
   background: rgba(141, 100, 249, .5);
 }
 #izaberiBrojPitanja{
-
+  quotes: initial;
 }
 .sumbitFormu{
 
   justify-content: end;
 }
 .dugmici{
-
+  quotes: initial;
 
 }
 .ZaPitanja{
-
+  quotes: initial;
 }
 .cube span{
 
-
+quotes: initial;
 
 }
 
@@ -142,7 +144,7 @@
   background: rgba(141, 100, 249, .5);
 }
 .brojPitanja{
-
+  quotes: initial;
 }
 .cube span:hover{
   cursor: pointer;

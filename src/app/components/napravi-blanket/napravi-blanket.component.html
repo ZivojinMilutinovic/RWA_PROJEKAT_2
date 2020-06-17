@@ -1,11 +1,11 @@
 <div class="container">
-  <form method="post" >
+  <form method="post" ngForm #forma="ngForm" >
   <div class="white-mode col-lg-8 col col-md-10 col-sm-12 blanket"
-  [ngClass]="isChecked ? 'dark-mode' : 'white-mode' ">
+  [ngClass]="isChecked ? 'dark-mode' : 'white-mode' " [hidden]="isKocka">
 
 
- <input  id="skuppitanja" />
- <input  id="skupodgovora" />
+ <input  id="skuppitanja" name="skupPitanja" ngModel #skupPitanja="ngModel" value=""/>
+ <input  id="skupodgovora" name="skupOdgovora" ngModel #skupOdgovora="ngModel" value="" />
 
 <div class="form-group">
 <label for="nmaterijala">Naziv materijala:</label>
@@ -27,11 +27,11 @@
 
 </div>
 <div class="dugmici" *ngIf="isButtonClicked">
-<a class="btn btn-danger" onclick="obrisiPitanje()">Obrisi jedno pitanje</a>
-<a class="btn btn-primary" onclick="dodajPitanje()">Dodaj jedno pitanje</a>
+<a class="btn btn-danger mr-2 mb-3" (click)="obrisiPitanje()">Obrisi jedno pitanje</a>
+<a class="btn btn-primary mb-3" (click)="dodajPitanje()">Dodaj jedno pitanje</a>
 </div>
 <div class="sumbitFormu" *ngIf="isButtonClicked">
-<a class="btn btn-info mt-2" onclick="prikaziKocku()">Napravi mi blanket</a>
+<a class="btn btn-info mt-2" (click)="prikaziKocku()">Napravi mi blanket</a>
 
 </div>
 
@@ -43,16 +43,17 @@
     <!-- 3D kocka-->
    </div>
 
-
-         <h3  id="obavestenje" class="bg-primary rounded mt-5 p-3">Vas blanket je zapamcen.Kliknite na kocku da nastavite</h3>
-      <div class="mojaKocka" >
+          <div *ngIf="isKocka">
+            <h3   class="bg-primary rounded mt-5 p-3">Vas blanket je zapamcen.Kliknite na kocku da nastavite</h3>
+      <div class="mojaKocka mb-5" >
          <div class="cube">
              <span></span>
              <span></span>
               <span></span>
-               <button  type="submit" class="submitForma"></button>
+               <button  type="submit" class="submitForma" (click)="submitForm(forma)" ></button>
 
       </div>
+    </div>
 
     </div>
 

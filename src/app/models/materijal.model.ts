@@ -1,4 +1,6 @@
 export interface Materijal{
+
+  id:string;
   nazivMaterijala:string;
 
   predmetMaterijala:string;

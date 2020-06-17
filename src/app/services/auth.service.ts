@@ -8,6 +8,7 @@ import { auth } from 'firebase';
 import { Router } from '@angular/router';
 import { MyUser } from '../models/user.model';
 import { AngularFireStorage } from '@angular/fire/storage';
+import { Materijal } from '../models/materijal.model';
 
 @Injectable({
   providedIn: 'root'
@@ -87,5 +88,20 @@ export class AuthService {
      getUserImage(url):Observable<string>{
      return this.afStorage.ref(url).getDownloadURL();
 
+     }
+   async  zapamtiMaterijal(materijal:Materijal){
+           const id=this.afs.createId();
+           materijal.id=id;
+         await  this.afs.collection<Materijal>("materijali").doc(id).set(materijal);
+     }
+     uzmiBlanketeZaKorisnika(id){
+    return  this.afs.collection<Materijal>("materijali",ref=>ref.where('userId','==',`${id}`)).snapshotChanges();
+     }
+     sviBlanketi(){
+      return this.afs.collection<Materijal>("materijali").snapshotChanges();
+     }
+     izbrisiBlanket(id){
+       this.afs.doc(`materijali/${id}`).delete().then(()=>console.log("Materijal uspesno obrisan"))
+       .catch(err=>console.log("Greska se javila "+err));
      }
 }

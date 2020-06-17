@@ -23,3 +23,11 @@ body,html{
   background-repeat: no-repeat;
   background-position: center;
 }
+
+.pozadina-napravi-blanket{
+  background-image: url("assets/AppPictures/backmat.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+

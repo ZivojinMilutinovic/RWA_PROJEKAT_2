@@ -9,6 +9,7 @@ export interface MyUser{
   kime:string;
   prezime:string;
   role:string;
+  filePath:string;
 
 
 }

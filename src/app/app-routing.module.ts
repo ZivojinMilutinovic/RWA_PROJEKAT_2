@@ -10,6 +10,9 @@ import { VodicComponent } from './components/vodic/vodic.component';
 import { MaterijaliInfoComponent } from './components/materijali-info/materijali-info.component';
 import { ManageUsersComponent } from './components/manage-users/manage-users.component';
 import { AuthGuard } from './guards/auth.guard';
+import { NapraviBlanketComponent } from './components/napravi-blanket/napravi-blanket.component';
+import { MojiBlanketiComponent } from './components/moji-blanketi/moji-blanketi.component';
+import { BazaBlanketaComponent } from './components/baza-blanketa/baza-blanketa.component';
 
 const routes: Routes = [
   {path:'home' ,component:HomeComponent},
@@ -18,6 +21,9 @@ const routes: Routes = [
   {path:'vodic',component:VodicComponent},
   {path:'materijali-info',component:MaterijaliInfoComponent},
   {path:'manage-users',component:ManageUsersComponent,canActivate:[AuthGuard]},
+  {path:'napravi-blanket',component:NapraviBlanketComponent},
+  {path:'moji-blanketi',component:MojiBlanketiComponent},
+  {path:'baza-blanketa',component:BazaBlanketaComponent},
   {path:'user-profile',component:UserProfileComponent},
   {path:'login',component:LoginComponent},
   {path:'**',component:PageNotFoundComponent}

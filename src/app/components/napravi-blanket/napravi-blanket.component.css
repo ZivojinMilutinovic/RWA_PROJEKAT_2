@@ -1,0 +1,157 @@
+
+.white-mode{
+  background-color: rgba(255,255, 255, 0.8) ;
+  color: black;
+}
+
+.dark-mode {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+}
+.blanket{
+
+    margin: 10px auto;
+    padding-bottom: 10px;
+}
+.mili{
+    line-height: 40px;
+}
+
+.dark{
+
+}
+.blanket form{
+  margin-bottom: 20px;
+}
+
+.mojaKocka{
+  display: none;
+  justify-content: center;
+  margin:20px auto !important;
+  position: relative;
+
+}
+.submitForma{
+  background: transparent;
+  width: 125%;
+  height: 125%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  border: none;
+}
+
+.cube{
+  margin: 50px;
+  position: relative;
+  width: 200px;
+  height: 200px;
+  transform-style: preserve-3d;
+  outline: 1px solif transparent;
+  transform: translateX(-50%);
+
+}
+.cube span{
+  position: absolute;
+  top: 0;
+  display: block;
+  height: 100%;
+  width: 100%;
+  background: #ff0;
+  transform-style: preserve-3d;
+  outline: 1px solif transparent;
+}
+.cube span:nth-child(1)
+{
+  left: 50%;
+  transform: rotate(-45deg) skew(15deg,15deg) ;
+  background-color: rgba(141, 100, 249, .5);
+  outline: 1px solif transparent;
+}
+.cube span:nth-child(2)
+{
+  transform:rotate(15deg) skew(15deg,15deg) ;
+  top: 155px;
+  left: 10px;
+  background-color: rgba(141, 100, 249, .5);
+  outline: 1px solif transparent;
+}
+.cube span:nth-child(3)
+{
+  transform:rotate(-15deg) skew(-15deg,-15deg);
+  top: 155px;
+  left: 190px;
+  background-color: rgba(141, 100, 249, .5);
+  outline: 1px solif transparent;
+
+}
+.cube span:nth-child(1)::before
+{
+  bottom: 0;
+ left: 0;
+}
+.cube span:nth-child(2)::before
+{
+  top: 0;
+ right: 0;
+}
+.cube span::before
+{
+  content: '';
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  background: rgba(141, 100, 249, .5);
+}
+#izaberiBrojPitanja{
+
+}
+.sumbitFormu{
+
+  justify-content: end;
+}
+.dugmici{
+
+
+}
+.ZaPitanja{
+
+}
+.cube span{
+
+
+
+}
+
+.cube span:nth-child(1)::after
+{
+  bottom: 0;
+ left: 0;
+}
+.cube span:nth-child(2)::after
+{
+  top: 0;
+ right: 0;
+}
+.cube span::after
+{
+  content: '';
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background: rgba(141, 100, 249, .5);
+}
+.brojPitanja{
+
+}
+.cube span:hover{
+  cursor: pointer;
+}
+#obavestenje{
+  color: #ddd;
+  display: none;
+}
+#skuppitanja,#skupodgovora{
+  display: none;
+}
+

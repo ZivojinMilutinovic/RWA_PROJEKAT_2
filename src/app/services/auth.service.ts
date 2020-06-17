@@ -7,6 +7,7 @@ import { User } from 'firebase';
 import { auth } from 'firebase';
 import { Router } from '@angular/router';
 import { MyUser } from '../models/user.model';
+import { AngularFireStorage } from '@angular/fire/storage';
 
 @Injectable({
   providedIn: 'root'
@@ -15,7 +16,7 @@ export class AuthService {
 
   user$:Observable<MyUser | null>;
   constructor(private afAuth:AngularFireAuth
-    ,private afs:AngularFirestore,private router:Router) {
+    ,private afs:AngularFirestore,private router:Router,private afStorage:AngularFireStorage) {
       //posto je observer ovde dolazi tok podataka i mi uzimamo jedan
       //on stalno osluskuje tok podataka kada dolaze novi observeri
       //to je jedan od prednosti Observer patterna
@@ -78,7 +79,13 @@ export class AuthService {
      return  this.afs.collection<MyUser>("users").snapshotChanges();
      }
      obrisiUsera(id){
+
        this.afs.doc(`users/${id}`).delete().then(()=>console.log("Korisnik uspesno obrisan"))
        .catch(err=>console.log("Greska se javila "+err));
+     }
+
+     getUserImage(url):Observable<string>{
+     return this.afStorage.ref(url).getDownloadURL();
+
      }
 }

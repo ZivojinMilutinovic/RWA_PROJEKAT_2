@@ -1,0 +1,78 @@
+.mojButton{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0;
+}
+.mojButton a{
+  position: relative;
+  width: 160px;
+  height: 60px;
+  transform-style: preserve-3d;
+  transform:perspective(500px)  rotateY(25deg) ;
+  transition: 2s;
+
+}
+.mojButton a span
+{
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  letter-spacing: 2px;
+  color: #333;
+  box-sizing: border-box;
+  background: #fff;
+  outline: 1px solid transparent;
+
+}
+.mojButton a span:nth-child(1)
+{
+  transform: translateZ(20px);
+  border-left: 6px solid #65cbf9;
+  border-right: 6px solid #65cbf9;
+}
+.mojButton a span:nth-child(4)
+{
+  transform: translateZ(-20px);
+  border-left: 6px solid #65cbf9;
+  border-right: 6px solid #65cbf9;
+}
+.mojButton a span:nth-child(2)
+{
+  width: 40px;
+  transform: rotateY(90deg) translateZ(-20px);
+  background: #0095d8;
+}
+.mojButton a span:nth-child(3)
+{
+  width: 40px;
+  transform: rotateY(-90deg) translateZ(-140px);
+  background: #0095d8;
+}
+.mojButton a:hover
+{
+  transform: perspective(500px) rotateX(360deg);
+  cursor: pointer;
+}
+
+
+@media only screen and (max-width:520px){
+  .mojButton a{
+      transform:perspective(500px)  rotateY(25deg) scale(.8) !important;
+
+
+  }
+  .mojButton a:hover
+{
+  transform: perspective(500px) rotateX(360deg) scale(.8) !important;
+
+}
+
+}

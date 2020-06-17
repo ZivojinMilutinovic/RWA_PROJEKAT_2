@@ -21,6 +21,13 @@ import { VodicComponent } from './components/vodic/vodic.component';
 import { MaterijaliInfoComponent } from './components/materijali-info/materijali-info.component';
 import { AlertComponent } from './components/alert/alert.component';
 import { ManageUsersComponent } from './components/manage-users/manage-users.component';
+import { AngularFireStorageModule } from '@angular/fire/storage';
+import { NapraviBlanketComponent } from './components/napravi-blanket/napravi-blanket.component';
+import { MojiBlanketiComponent } from './components/moji-blanketi/moji-blanketi.component';
+import { BazaBlanketaComponent } from './components/baza-blanketa/baza-blanketa.component';
+import { D3CheckboxComponent } from './components/d3-checkbox/d3-checkbox.component';
+import { D3CubeSpanComponent } from './components/d3-cube-span/d3-cube-span.component';
+import { D3ButtonComponent } from './components/d3-button/d3-button.component';
 
 
 
@@ -39,6 +46,12 @@ import { ManageUsersComponent } from './components/manage-users/manage-users.com
     MaterijaliInfoComponent,
     AlertComponent,
     ManageUsersComponent,
+    NapraviBlanketComponent,
+    MojiBlanketiComponent,
+    BazaBlanketaComponent,
+    D3CheckboxComponent,
+    D3CubeSpanComponent,
+    D3ButtonComponent,
 
   ],
   imports: [
@@ -50,7 +63,7 @@ import { ManageUsersComponent } from './components/manage-users/manage-users.com
     AngularFirestoreModule,
     AngularFireAuthModule,
     AngularFireModule.initializeApp(environment.firebaseConfig), //inicijalizacija firebase u nasoj aplikaciji
-
+    AngularFireStorageModule,
     AppRoutingModule    //inicijalizacija rutiranja u nasoj aplikaciji
   ],
 

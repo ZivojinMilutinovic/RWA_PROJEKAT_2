@@ -29,6 +29,7 @@ import { D3CheckboxComponent } from './components/d3-checkbox/d3-checkbox.compon
 import { D3CubeSpanComponent } from './components/d3-cube-span/d3-cube-span.component';
 import { D3ButtonComponent } from './components/d3-button/d3-button.component';
 import { pitanjeReducer } from './reducers/pitanje.reducer';
+import { KomentarisiBlanketComponent } from './components/komentarisi-blanket/komentarisi-blanket.component';
 
 
 
@@ -53,6 +54,7 @@ import { pitanjeReducer } from './reducers/pitanje.reducer';
     D3CheckboxComponent,
     D3CubeSpanComponent,
     D3ButtonComponent,
+    KomentarisiBlanketComponent,
 
   ],
   imports: [

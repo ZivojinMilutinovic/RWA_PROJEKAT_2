@@ -13,6 +13,7 @@ import { AuthGuard } from './guards/auth.guard';
 import { NapraviBlanketComponent } from './components/napravi-blanket/napravi-blanket.component';
 import { MojiBlanketiComponent } from './components/moji-blanketi/moji-blanketi.component';
 import { BazaBlanketaComponent } from './components/baza-blanketa/baza-blanketa.component';
+import { KomentarisiBlanketComponent } from './components/komentarisi-blanket/komentarisi-blanket.component';
 
 const routes: Routes = [
   {path:'home' ,component:HomeComponent},
@@ -24,6 +25,7 @@ const routes: Routes = [
   {path:'napravi-blanket',component:NapraviBlanketComponent},
   {path:'moji-blanketi',component:MojiBlanketiComponent},
   {path:'baza-blanketa',component:BazaBlanketaComponent},
+  {path:'komentarisi-blanket',component:KomentarisiBlanketComponent},
   {path:'user-profile',component:UserProfileComponent},
   {path:'login',component:LoginComponent},
   {path:'**',component:PageNotFoundComponent}

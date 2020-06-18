@@ -104,4 +104,5 @@ export class AuthService {
        this.afs.doc(`materijali/${id}`).delete().then(()=>console.log("Materijal uspesno obrisan"))
        .catch(err=>console.log("Greska se javila "+err));
      }
+
 }

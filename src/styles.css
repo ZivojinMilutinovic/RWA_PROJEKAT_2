@@ -4,6 +4,9 @@ input.ng-touched.ng-invalid{
 }
 body,html{
   height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
 }
 .pozadina-register{
   background-image: url("assets/AppPictures/register.jpg");
@@ -34,6 +37,12 @@ body,html{
   background-image: url("assets/AppPictures/pozadinaBela.jpg");
   background-size: cover;
   background-repeat: repeat;
+
+}
+.pozadina-baza-blanketa{
+  background: rgb(2,0,36);
+background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(108,83,227,1) 20%, rgba(0,212,255,1) 100%);
+
 
 }
 

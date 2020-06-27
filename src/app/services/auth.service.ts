@@ -104,5 +104,10 @@ export class AuthService {
        this.afs.doc(`materijali/${id}`).delete().then(()=>console.log("Materijal uspesno obrisan"))
        .catch(err=>console.log("Greska se javila "+err));
      }
-
+     vratiBlanket(id){
+      return this.afs.doc<Materijal>(`materijali/${id}`).snapshotChanges();
+     }
+     azurirajBlanket(id,data:Materijal){
+      this.afs.doc<Materijal>(`materijali/${id}`).update(data);
+     }
 }

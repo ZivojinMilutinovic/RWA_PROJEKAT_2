@@ -1,1 +1,44 @@
-<p>komentarisi-blanket works!</p>
+<div class="container">
+
+
+<div class="row justify-content-center mt-5 slika1">
+      <div class="karta">
+
+    <div class="details" *ngIf="blanket">
+          <div class="font-weight-bold">Naziv blanketa: {{blanket.nazivMaterijala}} </div>
+      <div class="mb-3 font-weight-bold">Predmet blanketa: {{blanket.predmetMaterijala}} </div>
+
+
+         <div *ngFor="let pitanje of pitanja;let i=index">
+
+          <div>P{{i+1}}:{{pitanja}}</div>
+           <div class="mb-4">O{{i+1}}:{{odgovori[i]}}</div>
+          </div>
+
+
+
+    </div>
+</div>
+</div>
+
+<div class="row mt-5 justify-content-center">
+ <form method="post">
+       <input style="display: none;"  id="ocena" #ocena />
+ <button type="button" style="background-color: transparent; border: none;" (click)="oceniBlanket(ocena)" >
+
+<span class="fa fa-star fa-3x" id="1"></span>
+<span class="fa fa-star fa-3x" id="2"></span>
+<span class="fa fa-star fa-3x" id="3"></span>
+<span class="fa fa-star fa-3x" id="4"></span>
+<span class="fa fa-star fa-3x" id="5"></span>
+</button>
+</form>
+</div>
+<div class="row justify-content-center mt-3">
+<p class="mb-5">Ocenite blanket</p>
+</div>
+<div>
+
+</div>
+<!-- Do ovde je odlicno sa komentarima -->
+<!-- Kontejner za komentare -->

@@ -25,7 +25,7 @@ const routes: Routes = [
   {path:'napravi-blanket',component:NapraviBlanketComponent},
   {path:'moji-blanketi',component:MojiBlanketiComponent},
   {path:'baza-blanketa',component:BazaBlanketaComponent},
-  {path:'komentarisi-blanket',component:KomentarisiBlanketComponent},
+  {path:'komentarisi-blanket/:id',component:KomentarisiBlanketComponent},
   {path:'user-profile',component:UserProfileComponent},
   {path:'login',component:LoginComponent},
   {path:'**',component:PageNotFoundComponent}

@@ -93,7 +93,7 @@
 </div>
 
 
-<a class="btn btn-secondary mb-4"  *ngIf="user" routerLink="/komentarisi-blanket" >
+<a class="btn btn-secondary mb-4"  *ngIf="user" [routerLink]="['/komentarisi-blanket',blanket.id]" >
 Oceni   <span class="fa fa-comment"></span></a>
 
 

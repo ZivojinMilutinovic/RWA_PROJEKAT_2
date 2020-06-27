@@ -7,36 +7,38 @@ body,html{
   width: 100%;
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
 }
 .pozadina-register{
-  background-image: url("assets/AppPictures/register.jpg");
+  background: url("assets/AppPictures/register.jpg") no-repeat center center fixed;
   background-size:cover;
-  background-repeat: no-repeat;
-  background-position: center;
+
 }
 .pozadina-login{
-  background-image: url("assets/AppPictures/login.jpg");
+  background: url("assets/AppPictures/login.jpg") no-repeat center center fixed;
   background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
+
 }
 .pozadina-home{
-  background-image: url("assets/AppPictures/home.jpg");
+  background: url("assets/AppPictures/home.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
   background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
 }
 
 .pozadina-napravi-blanket{
-  background-image: url("assets/AppPictures/backmat.jpeg");
+  background: url("assets/AppPictures/backmat.jpeg") no-repeat center center fixed;
   background-size: cover;
-  background-repeat: repeat;
+
 
 }
 .pozadina-moji-blanketi{
-  background-image: url("assets/AppPictures/pozadinaBela.jpg");
+  background: url("assets/AppPictures/pozadinaBela.jpg") no-repeat center center fixed;
   background-size: cover;
-  background-repeat: repeat;
+
 
 }
 .pozadina-baza-blanketa{
@@ -44,5 +46,12 @@ body,html{
 background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(108,83,227,1) 20%, rgba(0,212,255,1) 100%);
 
 
+}
+.pozadina-komentarisi-blanket{
+  background: url("assets/AppPictures/komentari.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
